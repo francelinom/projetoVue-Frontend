@@ -10,9 +10,23 @@
     <div class="info">
       <Info
         title="Categorias"
-        :value="info"
+        :value="infoCategotias.length"
         icon="fa fa-th-large"
         color="#d54d50"
+      />
+
+      <Info
+        title="Produtos"
+        :value="infoProdutos.length"
+        icon="fas fa-archive"
+        color="#3bc480"
+      />
+
+      <Info
+        title="Clientes"
+        :value="infoClientes.email"
+        icon="fas fa-archive"
+        color="#3282cd"
       />
     </div>
   </div>
@@ -28,12 +42,16 @@ export default {
   components: { PageTitle, Info },
   data: function() {
     return {
-      info: {}
+      infoCategotias: {},
+      infoProdutos: {},
+      infoClientes: {}
     }
   },
   methods: {
     getInfo() {
-      api.get(`/categorias`).then(res => (this.info = res.data))
+      api.get(`/categorias`).then(res => (this.infoCategotias = res.data))
+      api.get(`/produtos`).then(res => (this.infoProdutos = res.data))
+      api.get(`/clientes`).then(res => (this.infoClientes = res.data))
     }
   },
   mounted() {
@@ -42,4 +60,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+</style>
