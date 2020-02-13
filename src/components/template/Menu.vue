@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'Menu',
   computed: {
@@ -13,12 +13,12 @@ export default {
 </script>
 
 <style>
-  .menu{
-    grid-area: menu;
-    background: linear-gradient(to right, #232526, #414345);
+.menu {
+  grid-area: menu;
+  background: linear-gradient(to right, #232526, #414345);
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; 
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 </style>

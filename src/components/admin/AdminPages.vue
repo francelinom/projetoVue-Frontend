@@ -1,7 +1,10 @@
 <template>
   <div class="admin-pages">
-    <PageTitle icon="fa fa-cogs" main="Administração do Sistema"
-    sub="Cadastro & Cia"/>
+    <PageTitle
+      icon="fa fa-cogs"
+      main="Administração do Sistema"
+      sub="Cadastro & Cia"
+    />
   </div>
 </template>
 
@@ -10,10 +13,8 @@ import PageTitle from '../template/PageTitle'
 
 export default {
   name: 'AdminPages',
-  components:{ PageTitle}
+  components: { PageTitle }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

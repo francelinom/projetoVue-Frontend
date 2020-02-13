@@ -6,17 +6,17 @@ import AdminPages from '@/components/admin/AdminPages'
 
 Vue.use(VueRouter)
 
- const routes = [{
-   name: 'home',
-   path: '/',
-   component: Home
- },{
-   name: 'adminPages',
-   path: '/admin',
-   component: AdminPages
- }]
+const routes = [{
+  name: 'home',
+  path: '/',
+  component: Home
+}, {
+  name: 'adminPages',
+  path: '/admin',
+  component: AdminPages
+}]
 
- export default new VueRouter({
-   mode: 'history',
-   routes
- })
+export default new VueRouter({
+  mode: 'history',
+  routes
+})
