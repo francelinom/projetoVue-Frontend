@@ -18,14 +18,14 @@
       <Info
         title="Produtos"
         :value="infoProdutos.length"
-        icon="fas fa-archive"
+        icon="fa fa-cart-arrow-down" aria-hidden="true"
         color="#3bc480"
       />
 
       <Info
         title="Clientes"
         :value="infoClientes.email"
-        icon="fas fa-archive"
+        icon="fa fa-child" aria-hidden="true"
         color="#3282cd"
       />
     </div>

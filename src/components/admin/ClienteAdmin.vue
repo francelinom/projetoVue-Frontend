@@ -5,8 +5,29 @@
 </template>
 
 <script>
+
+import api from '@/api'
+
 export default {
-    name: 'ClienteAdmin'
+    name: 'ClienteAdmin',
+    data: function(){
+      return{
+        mode: 'save',
+        user: {},
+        users: []
+      }
+    },
+    methods:{
+      loadUsers(){
+        api.get('/clientes').then(res =>{
+          this.users = res.data
+          console.log(this.users)
+        })
+      }
+    },
+    mounted(){
+      this.loadUsers()
+    }
 }
 </script>
 
