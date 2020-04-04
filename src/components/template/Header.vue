@@ -64,7 +64,7 @@ header.header > a.toggle {
   height: 100%;
   color: #fff;
   justify-self: flex-start;
-  text-decoration: nome;
+  text-decoration: none;
 
   display: flex;
   justify-content: center;
