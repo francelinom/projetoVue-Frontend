@@ -51,7 +51,7 @@ export default {
 }
 
 .user-dropdown-img > img {
-  max-height: 30px;
+  max-height: 37px;
   border-radius: 5px;
 }
 

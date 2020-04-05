@@ -7,26 +7,26 @@
         sub="Base de Conhecimento"
       />
     </div>
-    <div class="info">
-      <Info
+    <div class="stats">
+      <Stat
         title="Categorias"
-        :value="infoCategotias.length"
-        icon="fa fa-th-large"
+        :value="stat.categories"
+        icon="fa fa-folder"
         color="#d54d50"
       />
 
-      <Info
-        title="Produtos"
-        :value="infoProdutos.length"
-        icon="fa fa-cart-arrow-down" aria-hidden="true"
+      <Stat
+        title="Artigos"
+        :value="stat.articles"
+        icon="fa fa-file" 
         color="#3bc480"
       />
 
-      <Info
-        title="Clientes"
-        :value="infoClientes.email"
-        icon="fa fa-child" aria-hidden="true"
-        color="#3282cd"
+      <Stat
+        title="Usúarios"
+        :value="stat.users"
+        icon="fa fa-user"
+        color="#3bc480"
       />
     </div>
   </div>
@@ -34,34 +34,31 @@
 
 <script>
 import PageTitle from '../template/PageTitle'
-import Info from './Info'
-import api from '@/api'
+import Stat from './Stat'
+import axios from 'axios'
+import { baseApiUrl } from '../../global'
 
 export default {
   name: 'Home',
-  components: { PageTitle, Info },
+  components: { PageTitle, Stat },
   data: function() {
     return {
-      infoCategotias: {},
-      infoProdutos: {},
-      infoClientes: {}
+      stat: {}
     }
   },
   methods: {
-    getInfo() {
-      api.get(`/categorias`).then(res => (this.infoCategotias = res.data))
-      api.get(`/produtos`).then(res => (this.infoProdutos = res.data))
-      api.get(`/clientes`).then(res => (this.infoClientes = res.data))
+    getStats(){
+      axios.get(`${baseApiUrl}/stats`).then(res => this.stat = res.data)
     }
   },
   mounted() {
-    this.getInfo()
+    this.getStats()
   }
 }
 </script>
 
 <style>
-  .info{
+  .stat{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

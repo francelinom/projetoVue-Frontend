@@ -3,7 +3,7 @@
     <PageTitle
       icon="fa fa-cogs"
       main="Administração do Sistema"
-      sub="Cadastro & Cia"
+      sub="Cadastros & Cia"
     />
 
     <div class="admin-pages-tabs">
