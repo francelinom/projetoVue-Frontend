@@ -1,6 +1,6 @@
 <template>
-  <div class="cliente-admin">
-      <h1>Cliente componentes</h1>
+  <div class="user-admin">
+      <h1>Usuário componente</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import api from '@/api'
 
 export default {
-    name: 'ClienteAdmin',
+    name: 'UserAdmin',
     data: function(){
       return{
         mode: 'save',

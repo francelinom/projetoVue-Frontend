@@ -9,16 +9,16 @@
     <div class="admin-pages-tabs">
       <b-card no-body>
         <b-tabs card>
-          <b-tab title="Categorias" active>
-            <CategoriaAdmin/>  
+          <b-tab title="Artigo" active>
+            <ArticleAdmin/>  
           </b-tab>  
 
-          <b-tab title="Produtos" active>
-            <ProdutoAdmin/> 
+          <b-tab title="Categorias" active>
+            <CategoryAdmin/> 
           </b-tab>
 
-          <b-tab title="Clientes" active>
-            <ClienteAdmin/>  
+          <b-tab title="Usuários" active>
+            <UserAdmin/>  
           </b-tab>        
         </b-tabs>
       </b-card>
@@ -28,13 +28,13 @@
 
 <script>
 import PageTitle from '../template/PageTitle'
-import CategoriaAdmin from './CategoriaAdmin'
-import ClienteAdmin from './ClienteAdmin'
-import ProdutoAdmin from './ProdutoAdmin'
+import ArticleAdmin from './ArticleAdmin'
+import CategoryAdmin from './CategoryAdmin'
+import UserAdmin from './UserAdmin'
 
 export default {
   name: 'AdminPages',
-  components: { PageTitle, CategoriaAdmin, ClienteAdmin, ProdutoAdmin }
+  components: { PageTitle, ArticleAdmin, CategoryAdmin, UserAdmin }
 }
 </script>
 
