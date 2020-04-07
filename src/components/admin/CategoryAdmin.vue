@@ -64,7 +64,7 @@ export default {
       loadCategories(){
         const url = `${baseApiUrl}/categories`
         axios.get(url).then(res =>{
-          //this.category = res.data
+          //this.categories = res.data
           this.categories = res.data.map(category =>{
             return{...category, value: category.id, text: category.path}
           })
