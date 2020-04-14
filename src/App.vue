@@ -14,7 +14,7 @@
 
 <script>
 import axios from 'axios'
-import {baseApiUrl, userKey} from './global'
+import {baseApiUrl, userKey} from '@/global'
 import { mapState } from 'vuex'
 import Header from '@/components/template/Header'
 import Menu from '@/components/template/Menu'
@@ -35,7 +35,7 @@ export default {
     async validateToken(){
       this.validatingToken = true
 
-      const json = localStorage.getIem(userKey)
+      const json = localStorage.getItem(userKey)
       const userData = JSON.parse(json)
       this.$store.commit('setUser', null)
 
@@ -62,7 +62,7 @@ export default {
     }
   },
   created(){
-    this.validatingToken()
+    this.validateToken()
   }
 }
 </script>
